@@ -1,0 +1,69 @@
+{% extends 'budget/base.html' %}
+{% block content %}
+
+<div class="container">
+
+  <section class="section section-stats">
+    <div class="row">
+
+      <div class="col s12 m12 l4">
+        <div class="card-panel">
+          <h6 class="bold">Total Budget</h6>
+          <h1 class="bold">THB3000</h1>
+        </div>
+      </div>
+
+      <div class="col s12 m6 l4">
+        <div class="card-panel">
+          <h6 class="bold">Total Budget</h6>
+          <h1 class="bold">THB3000</h1>
+        </div>
+      </div>
+
+      <div class="col s12 m6 l4">
+        <div class="card-panel">
+          <h6 class="bold">Total Budget</h6>
+          <h1 class="bold">THB3000</h1>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-expenses">
+    <div class="row">
+      <button class="btn waves-effect right">
+        <i class="material-icons white-text left">add_circle</i>
+        Add Expense</button>
+    </div>
+
+    <ul class="z-depth-1">
+
+      <li>
+        <div class="card-panel z-depth-0 expense">
+          <div class="row">
+
+            <div class="col l6">
+              <span class="title">Page Design</span>
+            </div>
+
+            <div class="col l3">
+              <span class="title">THB249</span>
+            </div>
+
+            <div class="col 1">
+              <span class="title">Development</span>
+            </div>
+
+            <i class="material-icons red-text right">close</i>
+
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+</div>
+
+{% endblock %}
