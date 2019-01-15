@@ -25,6 +25,14 @@ h1, h6{
   padding: 10px;
   margin-bottom: 50px;
 }
+/* project add view */
+form ul li.category{
+  display: inline-block;
+  background-color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
 
 /* project detail statistic */
 .section-stats h1 {
