@@ -5,10 +5,15 @@ html {
   font-family: 'Montserrat';
   background-color: #E0E0E0;
 }
+h1, h6{
+  font-weight: bold;
+}
 .bold {
   font-weight: bold;
 }
-
+.row {
+  margin: 0 !important;
+}
 /* project list (no project) */
 .noproject-wrapper {
   margin-top: 250px;
@@ -43,4 +48,10 @@ html {
   font-size: 16px;
   border-radius: 0;
   margin: 0;
+}
+.section-expenses .expense .category {
+  font-size: 13px;
+}
+.section-expenses li:nth-child(even) .expense {
+  background-color: #F2F2F2;
 }
