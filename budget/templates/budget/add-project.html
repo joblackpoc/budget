@@ -1,0 +1,33 @@
+{% extends 'budget/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <label for="categoryInput">Expense Categores (hit enter after every category)</label>
+    <input type="text" name="categoryInput"  id="categoryInput">
+    <input type="hidden" name="categoriesString">
+
+    <ul id="categoriesContainer">
+
+      <li class="category">
+        <span class="name">Development</span>
+        <span onclick="removeCategory(this)" class="btnRemove bold">X</span>
+      </li>
+      <li class="category">
+        <span class="name">Development</span>
+        <span onclick="removeCategory(this)" class="btnRemove bold">X</span>
+      </li>
+      <li class="category">
+        <span class="name">Development</span>
+        <span onclick="removeCategory(this)" class="btnRemove bold">X</span>
+      </li>
+      
+    </ul>
+
+  </form>
+</div>
+
+{% endblock %}
