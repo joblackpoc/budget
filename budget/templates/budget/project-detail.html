@@ -9,21 +9,21 @@
       <div class="col s12 m12 l4">
         <div class="card-panel">
           <h6 class="bold">Total Budget</h6>
-          <h1 class="bold">THB3000</h1>
+          <h1 class="bold">THB{{ project.budget }}</h1>
         </div>
       </div>
 
       <div class="col s12 m6 l4">
         <div class="card-panel">
-          <h6 class="bold">Total Budget</h6>
-          <h1 class="bold">THB3000</h1>
+          <h6 class="bold">Budget left</h6>
+          <h1 class="bold">THB...</h1>
         </div>
       </div>
 
       <div class="col s12 m6 l4">
         <div class="card-panel">
-          <h6 class="bold">Total Budget</h6>
-          <h1 class="bold">THB3000</h1>
+          <h6 class="bold">Total Transactions</h6>
+          <h1 class="bold">THB...</h1>
         </div>
       </div>
 
@@ -39,20 +39,21 @@
 
     <ul class="z-depth-1">
 
+      {% for expense in expense_list %}
       <li>
         <div class="card-panel z-depth-0 expense">
           <div class="row">
 
             <div class="col l6">
-              <span class="title">Page Design</span>
+              <span class="title">{{ expense.title }}</span>
             </div>
 
             <div class="col l3">
-              <span class="title">THB249</span>
+              <span class="title">{{ expense.amount }}</span>
             </div>
 
             <div class="col 1">
-              <span class="title bold">Development</span>
+              <span class="title bold">{{ expense.category.name }}</span>
             </div>
 
             <i class="material-icons red-text right">close</i>
@@ -60,72 +61,9 @@
           </div>
         </div>
       </li>
+      {%  endfor %}
 
-      <li>
-        <div class="card-panel z-depth-0 expense">
-          <div class="row">
 
-            <div class="col l6">
-              <span class="title">Page Design</span>
-            </div>
-
-            <div class="col l3">
-              <span class="title">THB249</span>
-            </div>
-
-            <div class="col 1">
-              <span class="title bold">Development</span>
-            </div>
-
-            <i class="material-icons red-text right">close</i>
-
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="card-panel z-depth-0 expense">
-          <div class="row">
-
-            <div class="col l6">
-              <span class="title">Page Design</span>
-            </div>
-
-            <div class="col l3">
-              <span class="title">THB249</span>
-            </div>
-
-            <div class="col 1">
-              <span class="title bold">Development</span>
-            </div>
-
-            <i class="material-icons red-text right">close</i>
-
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="card-panel z-depth-0 expense">
-          <div class="row">
-
-            <div class="col l6">
-              <span class="title">Page Design</span>
-            </div>
-
-            <div class="col l3">
-              <span class="title">THB249</span>
-            </div>
-
-            <div class="col 1">
-              <span class="title bold">Development</span>
-            </div>
-
-            <i class="material-icons red-text right">close</i>
-
-          </div>
-        </div>
-      </li>
 
     </ul>
   </section>
