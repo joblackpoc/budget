@@ -16,10 +16,23 @@
   function addNewCategory(name){
 
     document.querySelector('#categoriesContainer').insertAdjacentHTML('beforeend',
-    '<li class="category">
-      <span class="name">$(name)</span>
+    `<li class="category">
+      <span class="name">${name}</span>
       <span onclick="removeCategory(this)" class="btnRemove bold">X</span>
-    </li>')
+    </li>`)
+  }
+
+  function fethCategoryArray(){
+    var categories = []
+
+    document.querySelectorALL('.category').foreach(function(e){
+      name = e.querySelector('.name').innerHTML
+      if (name == '') return;
+
+      categoriesl.push(name)
+    })
+
+    return categories
   }
 
   function updateCategoriesString(){
