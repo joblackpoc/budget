@@ -1,7 +1,6 @@
 (function(){
-
   document.querySelector('#categoryInput').addEventListener('keydown', function(e){
-    if (e.keyCode != 13){
+    if (e.keyCode!= 13){
       return;
     }
 
@@ -14,7 +13,7 @@
   })
 
   function addNewCategory(name){
-
+    
     document.querySelector('#categoriesContainer').insertAdjacentHTML('beforeend',
     `<li class="category">
       <span class="name">${name}</span>
@@ -22,22 +21,21 @@
     </li>`)
   }
 
-  function fethCategoryArray(){
+  function fetchCategoryArray(){
     var categories = []
 
-    document.querySelectorALL('.category').foreach(function(e){
+    document.querySelectorAll('.category').forEach(function(e){
       name = e.querySelector('.name').innerHTML
-      if (name == '') return;
-
-      categoriesl.push(name)
+      if (name == '') return
+      
+      categories.push(name)
     })
 
     return categories
   }
 
   function updateCategoriesString(){
-    categories = fethCategoryArray()
+    categories = fetchCategoryArray()
     document.querySelector('input[name="categoriesString"]').value = categories.join(',')
   }
-
-})()
+})
