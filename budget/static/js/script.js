@@ -1,6 +1,8 @@
+
 (function(){
+  
   document.querySelector('#categoryInput').addEventListener('keydown', function(e){
-    if (e.keyCode!= 13){
+    if (e.keyCode != 13){
       return;
     }
 
@@ -26,7 +28,7 @@
 
     document.querySelectorAll('.category').forEach(function(e){
       name = e.querySelector('.name').innerHTML
-      if (name == '') return
+      if (name == '') return;
       
       categories.push(name)
     })
@@ -38,4 +40,4 @@
     categories = fetchCategoryArray()
     document.querySelector('input[name="categoriesString"]').value = categories.join(',')
   }
-})
+})()
