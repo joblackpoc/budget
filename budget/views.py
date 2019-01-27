@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import Project, Category, Expense
@@ -9,7 +8,8 @@ import json
 
 
 def project_list(request):
-    return render(request, 'budget/project-list.html')
+    project_list = Project.objects.all()
+    return render(request, 'budget/project-list.html', {'project_list': project_list})
 
 def project_detail(request, project_slug):
     project = get_object_or_404(Project, slug=project_slug)
