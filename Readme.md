@@ -1,6 +1,5 @@
-# Study Django 
-# Create budget application with
-# Django + CSS3 + Javascript
+# Study Django Dumpfound
+# Create budget application with Django + CSS3 + Javascript
 
 ## Django app
 1. admin.py
